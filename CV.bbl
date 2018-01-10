@@ -1,0 +1,51 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abe et~al.(2014{\natexlab{a}})]{Abe:2014dyd}
+K.~Abe et~al.
+\newblock {Measurement of the neutrino-oxygen neutral-current interaction cross
+  section by observing nuclear de-excitation $\gamma$-rays}.
+\newblock \emph{Phys. Rev. D}, 90:\penalty0 072012, 2014{\natexlab{a}}.
+
+\bibitem[Abe et~al.(2014{\natexlab{b}})]{Abe:2014usb}
+K.~Abe et~al.
+\newblock {Measurement of the intrinsic electron neutrino component in the T2K
+  neutrino beam with the ND280 detector}.
+\newblock \emph{Phys. Rev. D}, 89:\penalty0 092003, 2014{\natexlab{b}}.
+
+\bibitem[Abe et~al.(2014{\natexlab{c}})]{Abe:2014ugx}
+K.~Abe et~al.
+\newblock {Precise Measurement of the Neutrino Mixing Parameter $\theta_{23}$
+  from Muon Neutrino Disappearance in an Off-axis Beam}.
+\newblock \emph{Phys.Rev.Lett.}, 112:\penalty0 181801, 2014{\natexlab{c}}.
+
+\bibitem[Abe et~al.(2014{\natexlab{d}})]{Abe:2013hdq}
+K.~Abe et~al.
+\newblock {Observation of Electron Neutrino Appearance in a Muon Neutrino
+  Beam}.
+\newblock \emph{Phys.Rev.Lett.}, 112:\penalty0 061802, 2014{\natexlab{d}}.
+
+\bibitem[Abe et~al.(2013{\natexlab{a}})]{Abe:2013fuq}
+K.~Abe et~al.
+\newblock {Measurement of Neutrino Oscillation Parameters from Muon Neutrino
+  Disappearance with an Off-axis Beam}.
+\newblock \emph{Phys.Rev.Lett.}, 111\penalty0 (21):\penalty0 211803,
+  2013{\natexlab{a}}.
+
+\bibitem[Abe et~al.(2013{\natexlab{b}})]{Abe:2013xua}
+K.~Abe et~al.
+\newblock {Evidence of Electron Neutrino Appearance in a Muon Neutrino Beam}.
+\newblock \emph{Phys.Rev.}, D88\penalty0 (3):\penalty0 032002,
+  2013{\natexlab{b}}.
+
+\bibitem[Abe et~al.(2013{\natexlab{c}})]{Abe:2013jth}
+K.~Abe et~al.
+\newblock {Measurement of the Inclusive NuMu Charged Current Cross Section on
+  Carbon in the Near Detector of the T2K Experiment}.
+\newblock \emph{Phys.Rev.}, D87:\penalty0 092003, 2013{\natexlab{c}}.
+
+\end{thebibliography}

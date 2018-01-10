@@ -1,0 +1,194 @@
+\documentclass[margin,line]{res}
+\renewcommand\refname{}
+ \usepackage{natbib}
+
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth=5.5in
+\itemsep=0in
+\parsep=0in
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {%\section*{\refname}% <--- outcommented
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\begin{document}
+
+\name{\Large Dominic B. Brailsford \vspace*{.1in}}
+
+\begin{resume}
+\section{\sc Contact Information}
+\vspace{.05in}
+\begin{tabular}{@{}p{2in}p{4in}}
+Blackett Laboratory 530          & { Phone:}  (+44) 7427546506\\
+Prince Consort Road   & { Email:}    d.brailsford11@imperial.ac.uk \\      
+London  SW7 2BW & \\   
+\end{tabular}
+
+
+\section{\sc Research Interests}
+\begin{list2}
+\item Neutrino physics: CP violation, neutrino mass, neutrino-nucleus interactions.
+\item Weakly-interacting physics: leptons, reconstruction techniques.
+\end{list2}
+
+\section{\sc Education}
+{\bf Imperial College London}, London UK\\
+\vspace*{-.1in}
+\begin{list1}
+\item[] Ph.D. candidate, High Energy Physics, studying under Dr. Yoshi Uchida.
+\end{list1}
+
+{\bf Durham University}, Durham UK\\
+\vspace*{-.1in}
+\begin{list1}
+\item[] MPhys Physics (First Class), July 2011
+\end{list1}
+
+
+\section{\sc Academic and Work Experience}
+{\bf Imperial College London}, London UK
+
+\vspace{-.3cm}
+{\em Graduate Student} \hfill {\bf October 2011-present}\\
+Research under the supervision of Dr. Yoshi Uchida and Dr. Morgan Wascko, focusing on the selection of charged-current neutrino interactions on lead in the T2K near detector ND280.  The search makes use of the ND280 Electromagnetic Calorimeters (ECals) to make the world's first charged-current cross-section on lead below 1 GeV.  The analysis is based on a set of new reconstruction algorithms which I have developed.
+
+Other work focused on general software improvements and maintenance of the ECal reconstruction software and the near detector analysis software.  I investigated the effect of the magnetic field simulation in the ND280 flux return yoke on the event rate in the barrel ECals.  This addition to the simulation significantly improved the agreement between simulated and real data in the ECals.  I was one of the driving forces for preparing the ECal software for the most recent ND280 software iteration.  This involved a large amount of software development as well as being the liaison with other detector software groups.
+
+ 
+% \section{\sc Honors and Awards} 
+%\begin{list2}
+%\item Martin Deutsch Student Award for Excellence in Experimental Physics, 2008
+%\item National Defense Science and Engineering Fellow, 2006-2009
+%\item Grainger Senior Scholarship in Physics, 2005-2006
+%\item Phi Beta Kappa, 2005
+%\item Student Marshal, University of Chicago, 2005
+%\item Barry M. Goldwater Scholarship, 2004 
+%\end{list2}
+
+ 
+\section{\sc Publications}
+\nocite{*}
+\bibliography{CV_bib}
+\bibliographystyle{unsrtnat}
+
+\section{\sc Conference Presentations}
+
+{\bf Measuring charged current neutrino interactions in the T2K near detector ECals}
+\begin{list2}
+\item IOP Joint High Energy Particle Physics and Astro Particle Physics Groups Annual Meeting, Royal Holloway, University of London, UK, 2014
+\end{list2}
+
+{\bf Overview of the T2K Experiment}
+\begin{list2}
+\item RAL HEP Summer School, Somerville College, Oxford, UK, 2012
+\end{list2}
+
+\section{\sc Collaboration Memberships} 
+\begin{list2}
+\item T2K (2011-present)
+
+
+\end{list2}
+
+\section{\sc Collaboration Committees and Responsibilities} 
+\begin{list2}
+\item 2012-2014 ecalRecon software package manager
+\item 2012-2014 oaAnalysis software package manager
+\item 2012-2014 nd280AnalysisTools software package manager
+\item 2013 member of the ND280 file size reduction task force
+\item 2014 chair of the T2K Imperial group meetings
+
+
+\end{list2}
+
+\section{\sc Teaching }
+\begin{list2}
+\item 2014 1st year Vibrations and Waves, teaching assistant to Dr. Yvonne Unruh
+\item 2013 1st year Electricity and Magnetism, teaching assistant to Dr. Daniel Eakins and Dr. Piero Posocco
+\item 2013 1st year Special Relativity, teaching assistant to Prof. Jordan Nash and Dr. John Tisch
+\item 2013 1st year collections exam marker
+\item 2013 1st year Vectors, teaching assistant to Dr. Yvonne Unruh
+\item 2012 1st year classes, teaching assistant to Prof. Zulfikar Najmudin
+
+\end{list2}
+
+\section{\sc Mentoring }
+\begin{list2}
+\item Mentored Mr. Luke Pickering (PhD candidate)
+\item Mentored Mr. Jasminder Sidhu (MSc candidate)
+\item Mentored Mr. Muhsin Ali (MSc candidate)
+\item Mentored Miss Tessa Carver (Summer student)
+
+
+\end{list2}
+
+
+\section{\sc Technical skills} 
+\begin{list2}
+\item Analysis Software: ROOT
+\item Languages: C++, Python, Pascal
+\item Applications:  \LaTeX
+\item Operating Systems:  Unix/Linux, Windows.
+
+
+\end{list2}
+
+
+\newpage
+\section{\sc References}
+\begin{list2}
+\item Dr. Yoshi Uchida\\ Blackett Laboratory 524\\Prince Consort Road\\London\\SW7 2BB\\Phone: +44 (0)20 7594 7821\\Email: y.uchida@imperial.ac.uk\\
+\item Dr. Morgan O. Wascko\\ Blackett Laboratory 525\\Prince Consort Road\\London\\SW7 2BB\\Phone: +44 (0)20 7594 1607\\Email: m.wascko@imperial.ac.uk\\
+\item Dr. Asher C. Kaboth\\ Blackett Laboratory 530\\Prince Consort Road\\London\\SW7 2BB\\Phone: +44 (0)20 7594 7813\\Email: a.kaboth@imperial.ac.uk\\
+
+
+
+\end{list2}
+%\section{\sc Hobbies and Interests}
+%\begin{list2}
+%\item Change ringing of historic tower bells
+%\item Independent knitting pattern designer
+%\end{list2}
+
+
+
+
+\end{resume}
+\end{document}
+
+
+
+
