@@ -2,10 +2,29 @@
 \renewcommand\refname{}
 % \usepackage{natbib}
 %\usepackage[style=authoryear,backend=biber]{biblatex}
-\usepackage[backend=biber,style=mla,sorting=none]{biblatex}
+\usepackage[backend=biber,style=phys,sorting=none]{biblatex}
+\DeclareSourcemap{
+ \maps[datatype=bibtex,overwrite=true]{
+  \map{
+    \step[fieldsource=Collaboration, final=true]
+    \step[fieldset=usera, origfieldval, final=true]
+  }
+ }
+}
+
+\renewbibmacro*{author}{%
+  \iffieldundef{usera}{%
+    \printnames{author}%
+  }{%
+    \printnames{author} (\printfield{usera})%
+  }%
+}%
 %\usepackage[utf8]{inputenc}
 %\usepackage[greek,english]{babel}
 %\usepackage{CJKutf8}
+
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
 
 \addbibresource{publications.bib}
 \addbibresource{proceedings.bib}
@@ -97,22 +116,22 @@ Lancaster  LA1 4YW & \\
 \begin{itemize}
 \item Selection of charged-current neutrino interactions in the T2K near detector's Electromagnetic Calorimeter (ECal).
 \begin{itemize}
-\item Redesign of the ECal resconstruction algorithms from scratch.
+\item Redesign of the ECal reconstruction algorithms from scratch.
 \item Development of new pattern recognition algorithms, enhancing the physical capability of the ECal.
 \item Assessment of new ECal-based systematic uncertainties which have now been used in other near detector analyses.
 \item The developed selection can now be used in the flagship T2K analyses, enhancing the experiment's sensitivity to neutrino oscillations.
 \end{itemize}
 \item Magnetic field simulation in the T2K near detector magnetic flux return yoke.
 \begin{itemize}
-\item I developed the first ever simulation of the magnetic field in the near detector's flux return yoke.
+\item Developed the first ever simulation of the magnetic field in the near detector's flux return yoke.
 \item Implementation of this simulation massively reduced disagreements between collected data and Monte Carlo simulation in the near detector.
 \item The magnetic field simulation is now a permanent feature of the near detector simulation.
 \end{itemize}
 \item Near detector ECal reconstruction (ecalRecon) and analysis (oaAnalysis) software package manager.
 \begin{itemize}
-\item I coordinated development of the packages with the numerous software developers.
-\item I managed regular tagging/freezes of the software packages.
-\item I was one of the key liasons during prepartion for the largest data and simulation production ever run by the T2K near detector group.
+\item Coordinated development of the packages with the numerous software developers.
+\item Managed regular tagging/freezes of the software packages.
+\item One of the key liaisons during preparation for the largest data and simulation production ever run by the T2K near detector group.
 \end{itemize}
 \end{itemize}
 
@@ -123,10 +142,10 @@ Lancaster  LA1 4YW & \\
 \begin{itemize}
 \item The DUNE 35~ton Liquid Argon Time Projection Chamber (LArTPC) prototype.
 \begin{itemize}
-\item Development of simulation filtering sofware, increasing the number of physics study opportunities for other collaborators.
-\item Development of the data aquisition software, overhauling the input configuration structure which improved efficiency and ease of use.
-\item Calibration of the cosmic ray paddles which were used in every 35~ton analysis.
-\item Author of two 35~ton detector papers which currently in preparation.
+\item Development of simulation filtering software, increasing the number of physics study opportunities for other collaborators.
+\item Development of the data acquisition software, overhauling the input configuration structure which improved efficiency and ease of use.
+\item Calibration of the cosmic ray paddles, which were used in every 35~ton analysis.
+\item Author of two 35~ton detector papers, which are currently in preparation.
 \end{itemize}
 \item The DUNE muon neutrino disappearance selection in the far detector.
 \begin{itemize}
@@ -136,14 +155,14 @@ Lancaster  LA1 4YW & \\
 \end{itemize}
 \item Rock-induced neutrino backgrounds for the DUNE near detector.
 \begin{itemize}
-\item Successful development of new simulation from scratch, which simulates background particles that enter the DUNE near detector cavern from the surronding rock.
+\item Successful development of new simulation from scratch, which simulates background particles that enter the DUNE near detector cavern from the surrounding rock.
 \item Work originally undertaken as part of the DUNE near detector task force as an invited member.
 \item The work scope has been expanded at the request of the DUNE near detector physics convenor.
 \end{itemize}
 \item SBND Monte Carlo production.
 \begin{itemize}
 \item Group coordinator.
-\item Group tasked with producing massive volumes of data which is critical for progression of SBND.
+\item Group tasked with producing massive volumes of data,  which is critical for progression of SBND.
 \item Personally built the group from scratch; developing the necessary infrastructure for the group to function.
 \item Led the group through multiple critical Monte Carlo productions, disseminating the data to analysers.
 \end{itemize}
@@ -179,74 +198,110 @@ Lancaster  LA1 4YW & \\
 %\end{list2}
 
  
-\section{\sc Publications}
-%\bibliographystyle{utphys}
-%\bibliographystyle{unsrtnat}
-%\bibliography{publications}
 \begin{refsection}[publications]
 \nocite{*}
+\section{\sc Publications}
 \printbibliography
 \end{refsection}
 
 \section{\sc Conference Presentations}
 
+{\bf Overview of the T2K Experiment}
+\begin{list2}
+\item RAL HEP Summer School, Somerville College, Oxford, UK, 2012
+\end{list2}
 {\bf Measuring charged current neutrino interactions in the T2K near detector ECals}
 \begin{list2}
-\item IOP Joint High Energy Particle Physics and Astro Particle Physics Groups Annual Meeting, Royal Holloway, University of London, UK, 2014
+\item IOP Joint High Energy Particle Physics and Astro Particle Physics Groups Annual Meeting, Royal Holloway, University of London, London, UK, 2014
+\end{list2}
+{\bf Physics Program of the Short-Baseline Near Detector}
+\begin{list2}
+\item The XXVII International Conference on Neutrino Physics and Astrophysics (Neutrino 2016), Imperial College London, London, UK, 2016
+\end{list2}
+{\bf Selection of charged-current muon-neutrino and electron-neutrino interactions in the DUNE far detector}
+\begin{list2}
+\item 2017 Meeting of the APS Division of Particles and Fields (DPF 2017), Fermi National Accelerator Laboratory, Illinois, USA, 2017
+\end{list2}
+{\bf DUNE: Status and Perspectives}
+\begin{list2}
+\item Prospects in Neutrino Physics (NuPhys 2017), The Barbican Centre, London, UK, 2017
 \end{list2}
 
-\section{\sc Conference Proceedings}
-%\bibliographystyle{utphys}
-%\bibliographystyle{unsrtnat}
-%\bibliography{publications}
 \begin{refsection}[proceedings]
+\section{\sc Conference Proceedings}
 \nocite{*}
 \printbibliography
 \end{refsection}
 
 
-{\bf Overview of the T2K Experiment}
-\begin{list2}
-\item RAL HEP Summer School, Somerville College, Oxford, UK, 2012
-\end{list2}
 
 \section{\sc Collaboration Memberships} 
 \begin{list2}
 \item T2K (2011-present)
-
-
+\item DUNE (2015-present)
+\item SBND (2015-present)
+\item HPTPC (2016-present)
 \end{list2}
 
 \section{\sc Collaboration Committees and Responsibilities} 
 \begin{list2}
-\item 2012-2014 ecalRecon software package manager
-\item 2012-2014 oaAnalysis software package manager
-\item 2012-2014 nd280AnalysisTools software package manager
-\item 2013 member of the ND280 file size reduction task force
+\item 2012-2014 T2K ecalRecon software package manager
+\item 2012-2014 T2K oaAnalysis software package manager
+\item 2012-2014 T2K nd280AnalysisTools software package manager
+\item 2013 member of the T2K ND280 file size reduction task force
 \item 2014 chair of the T2K Imperial group meetings
+\item 2015-present chair of the Lancaster liquid argon group meetings
+\item 2015-present SBND UK APA cold testing group manager
+\item 2016-2017 member of the DUNE near detector task force
+\item 2016-present SBND Monte Carlo production coordinator
+\item 2016-present SBND sbndutil software manager
+\item 2017-present chair of the Lancaster neutrino group meetings
+\item 2017-present SBND speakers committee 
+\item 2017 Manager of the HPTPC SPSC beam time request proposal
+\end{list2}
 
-
+\section{\sc Workshop and conference organisation}
+{\bf T2K ECal-As-Target workshop} --- sole host and organiser
+\begin{list2}
+\item Bailrigg, Lancaster University, Lancashire, UK, 2015
+\end{list2}
+{\bf Exotic neutrinos workshop} --- host and organiser
+\begin{list2}
+\item Bailrigg, Lancaster University, Lancashire, UK, 2016
+\end{list2}
+{\bf Short Baseline Analysis workshop} --- planning committee
+\begin{list2}
+\item Fermi National Accelerator Laboratory, Illinois, USA, 2017
 \end{list2}
 
 \section{\sc Teaching }
 \begin{list2}
-\item 2014 1st year Vibrations and Waves, teaching assistant to Dr. Yvonne Unruh
+\item 2012 1st year classes, teaching assistant to Prof. Zulfikar Najmudin
 \item 2013 1st year Electricity and Magnetism, teaching assistant to Dr. Daniel Eakins and Dr. Piero Posocco
 \item 2013 1st year Special Relativity, teaching assistant to Prof. Jordan Nash and Dr. John Tisch
 \item 2013 1st year collections exam marker
 \item 2013 1st year Vectors, teaching assistant to Dr. Yvonne Unruh
-\item 2012 1st year classes, teaching assistant to Prof. Zulfikar Najmudin
-
+\item 2014 1st year Vibrations and Waves, teaching assistant to Dr. Yvonne Unruh
+\item 2015 UK LArSoft workshop, invited tutor and lecturer
+\item 2017 UK LArSoft workshop, invited tutor and lecturer
 \end{list2}
 
 \section{\sc Mentoring }
 \begin{list2}
-\item Mentored Mr. Luke Pickering (PhD candidate)
+\item Supervised Mr. Matthew Garman (Intern)
+\item Supervised Miss Jean Morris (Intern)
+\item Supervised Miss Alice Baxter (Intern)
+\item Supervised Miss Ellen Sandford (Intern)
+\item Supervised Mr. Xiao Zhang (Intern)
+\item Supervised Mr. Matthew Taylor (Intern)
+\item Supervised Miss. Emily Gamblen (Intern)
+\item Mentored Mr. Alasdair Knox (PhD candidate)
+\item Mentored Mr. Adam Lister (PhD candidate)
+\item Mentored Mr. Danny Devitt (PhD candidate)
+\item Mentored Dr. Luke Pickering (PhD candidate)
 \item Mentored Mr. Jasminder Sidhu (MSc candidate)
 \item Mentored Mr. Muhsin Ali (MSc candidate)
 \item Mentored Miss Tessa Carver (Summer student)
-
-
 \end{list2}
 
 
@@ -256,8 +311,6 @@ Lancaster  LA1 4YW & \\
 \item Languages: C++, Python, Pascal
 \item Applications:  \LaTeX
 \item Operating Systems:  OS/X, Unix/Linux, Windows, Android.
-
-
 \end{list2}
 
 
