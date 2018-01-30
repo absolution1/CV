@@ -1,6 +1,15 @@
 \documentclass[margin,line]{res}
 \renewcommand\refname{}
- \usepackage{natbib}
+% \usepackage{natbib}
+%\usepackage[style=authoryear,backend=biber]{biblatex}
+\usepackage[backend=biber,style=mla,sorting=none]{biblatex}
+%\usepackage[utf8]{inputenc}
+%\usepackage[greek,english]{babel}
+%\usepackage{CJKutf8}
+
+\addbibresource{publications.bib}
+\addbibresource{proceedings.bib}
+\defbibheading{bibliography}{}
 
 \oddsidemargin -.25in
 \evensidemargin -.25in
@@ -23,26 +32,26 @@
 
 
 \makeatletter
-\renewenvironment{thebibliography}[1]
-     {%\section*{\refname}% <--- outcommented
-      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \@openbib@code
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
-      \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
-       {\@latex@warning{Empty `thebibliography' environment}}%
-      \endlist}
-\makeatother
+%\renewenvironment{thebibliography}[1]
+%     {%\section*{\refname}% <--- outcommented
+%      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+%      \list{\@biblabel{\@arabic\c@enumiv}}%
+%           {\settowidth\labelwidth{\@biblabel{#1}}%
+%            \leftmargin\labelwidth
+%            \advance\leftmargin\labelsep
+%            \@openbib@code
+%            \usecounter{enumiv}%
+%            \let\p@enumiv\@empty
+%            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+%      \sloppy
+%      \clubpenalty4000
+%      \@clubpenalty \clubpenalty
+%      \widowpenalty4000%
+%      \sfcode`\.\@m}
+%     {\def\@noitemerr
+%       {\@latex@warning{Empty `thebibliography' environment}}%
+%      \endlist}
+%\makeatother
 
 \begin{document}
 
@@ -82,10 +91,38 @@ London  SW7 2BW & \\
 {\bf Imperial College London}, London UK
 
 \vspace{-.3cm}
-{\em Graduate Student} \hfill {\bf October 2011-present}\\
-Research under the supervision of Dr. Yoshi Uchida and Dr. Morgan Wascko, focusing on the selection of charged-current neutrino interactions on lead in the T2K near detector ND280.  The search makes use of the ND280 Electromagnetic Calorimeters (ECals) to make the world's first charged-current cross-section on lead below 1 GeV.  The analysis is based on a set of new reconstruction algorithms which I have developed.
+{\em Ph.D Student} --- {\bf October 2011 to April 2015}%\\ 
+%\newline
+\begin{itemize}
+\item Selection of charged-current neutrino interactions in the T2K near detector's Electromagnetic Calorimeter (ECal).
+\begin{itemize}
+\item Redesign of the ECal resconstruction algorithms from scratch.
+\item Development of new pattern recognition algorithms, enhancing the physical capability of the ECal.
+\item Assessment of new ECal-based systematic uncertainties which have now been used in other near detector analyses.
+\item The developed selection can now be used in the flagship T2K analyses, enhancing the experiment's sensitivity to neutrino oscillations.
+\end{itemize}
+\item Magnetic field simulation in the T2K near detector magnetic flux return yoke.
+\begin{itemize}
+\item I developed the first ever simulation of the magnetic field in the near detector's flux return yoke.
+\item Implementation of this simulation massively reduced disagreements between collected data and Monte Carlo simulation in the near detector.
+\item The magnetic field simulation is now a permanent feature of the near detector simulation.
+\end{itemize}
+\item Near detector ECal reconstruction (ecalRecon) and analysis (oaAnalysis) software package manager.
+\begin{itemize}
+\item I coordinated development of the packages with the numerous software developers.
+\item I managed regular tagging/freezes of the software packages.
+\item I was one of the key liasons during prepartion for the largest data and simulation production ever run by the T2K near detector group.
+\end{itemize}
+\end{itemize}
 
-Other work focused on general software improvements and maintenance of the ECal reconstruction software and the near detector analysis software.  I investigated the effect of the magnetic field simulation in the ND280 flux return yoke on the event rate in the barrel ECals.  This addition to the simulation significantly improved the agreement between simulated and real data in the ECals.  I was one of the driving forces for preparing the ECal software for the most recent ND280 software iteration.  This involved a large amount of software development as well as being the liaison with other detector software groups.
+{\bf Lancaster University}, Lancashire UK
+
+\vspace{-.3cm}
+{\em Research Associate} --- {\bf April 2015 to present}%\\ 
+
+%Research under the supervision of Dr. Yoshi Uchida and Dr. Morgan Wascko, focusing on the selection of charged-current neutrino interactions on lead in the T2K near detector ND280.  The search makes use of the ND280 Electromagnetic Calorimeters (ECals) to make the world's first charged-current cross-section on lead below 1 GeV.  The analysis is based on a set of new reconstruction algorithms which I have developed.
+
+%Other work focused on general software improvements and maintenance of the ECal reconstruction software and the near detector analysis software.  I investigated the effect of the magnetic field simulation in the ND280 flux return yoke on the event rate in the barrel ECals.  This addition to the simulation significantly improved the agreement between simulated and real data in the ECals.  I was one of the driving forces for preparing the ECal software for the most recent ND280 software iteration.  This involved a large amount of software development as well as being the liaison with other detector software groups.
 
  
 % \section{\sc Honors and Awards} 
@@ -100,10 +137,13 @@ Other work focused on general software improvements and maintenance of the ECal 
 
  
 \section{\sc Publications}
-\nocite{*}
 %\bibliographystyle{utphys}
-\bibliographystyle{unsrtnat}
-\bibliography{publications}
+%\bibliographystyle{unsrtnat}
+%\bibliography{publications}
+\begin{refsection}[publications]
+\nocite{*}
+\printbibliography
+\end{refsection}
 
 \section{\sc Conference Presentations}
 
@@ -111,6 +151,16 @@ Other work focused on general software improvements and maintenance of the ECal 
 \begin{list2}
 \item IOP Joint High Energy Particle Physics and Astro Particle Physics Groups Annual Meeting, Royal Holloway, University of London, UK, 2014
 \end{list2}
+
+\section{\sc Conference Proceedings}
+%\bibliographystyle{utphys}
+%\bibliographystyle{unsrtnat}
+%\bibliography{publications}
+\begin{refsection}[proceedings]
+\nocite{*}
+\printbibliography
+\end{refsection}
+
 
 {\bf Overview of the T2K Experiment}
 \begin{list2}

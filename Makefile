@@ -3,7 +3,7 @@
 
 CV.pdf: CV.tex
 	@rm -f CV.{aux,toc,lof,lot}
-	(/Library/TeX/Root/bin/x86_64-darwin/pdflatex CV && /Library/TeX/Root/bin/x86_64-darwin/bibtex CV && /Library/TeX/Root/bin/x86_64-darwin/pdflatex CV && /Library/TeX/Root/bin/x86_64-darwin/pdflatex CV)
+	(/Library/TeX/Root/bin/x86_64-darwin/xelatex CV && /Library/TeX/Root/bin/x86_64-darwin/biber CV --output_safechars && /Library/TeX/Root/bin/x86_64-darwin/xelatex CV)
 	@rm -f CV.{aux,toc,lof,lot}
 
 clean:
